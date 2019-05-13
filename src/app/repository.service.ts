@@ -9,7 +9,7 @@ export class RepositoryService {
   constructor(private http: HttpClient,) { }
 
   //public url="https://jsonplaceholder.typicode.com/users";
-   public url="http://localhost:8080";
+   public url="http://206.81.9.162:8080";
    public Image_Url = this.url+'/Images/';
    public Back_Url = this.url+'/special/';
 
