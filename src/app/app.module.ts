@@ -1,12 +1,15 @@
+
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+
+import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RepositoryService } from "./repository.service";
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { TravelpageComponent } from './travelpage/travelpage.component';
 import { MainnavbarComponent } from './Common/mainnavbar/mainnavbar.component';
 import { FooterbarComponent } from './Common/footerbar/footerbar.component';
@@ -34,15 +37,18 @@ import { FilterPipe } from './filter.pipe';
     UpdateservicepageComponent,
     HomeservicepagesComponent,
     FilterPipe
-  ],
-  imports: [
-    MDBBootstrapModule.forRoot(),
+ 
+  ], 
+  imports: [ 
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    MDBBootstrapModule.forRoot(),
+    
   ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
     RepositoryService
   ],
